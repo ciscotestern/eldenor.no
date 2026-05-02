@@ -1,0 +1,82 @@
+---
+// Giscus Comments Component
+// Configure these values after setting up Giscus at https://giscus.app
+interface Props {
+  repo?: string;           // Your GitHub repo: "username/repo"
+  repoId?: string;         // Get from giscus.app config
+  category?: string;       // Discussion category name
+  categoryId?: string;     // Get from giscus.app config
+}
+
+const {
+  repo = "YOUR_USERNAME/YOUR_REPO",           // CHANGE THIS
+  repoId = "YOUR_REPO_ID",                    // CHANGE THIS
+  category = "Announcements",
+  categoryId = "YOUR_CATEGORY_ID",            // CHANGE THIS
+} = Astro.props;
+---
+
+<section class="comments-section">
+  <h2 class="comments-title">
+    <span class="title-icon">💬</span>
+    Comments
+  </h2>
+  
+  <div class="giscus-wrapper">
+    <script
+      src="https://giscus.app/client.js"
+      data-repo={repo}
+      data-repo-id={repoId}
+      data-category={category}
+      data-category-id={categoryId}
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="dark_dimmed"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async
+    />
+  </div>
+</section>
+
+<style>
+  .comments-section {
+    margin-top: var(--space-4xl);
+    padding-top: var(--space-2xl);
+    border-top: 1px solid var(--color-border);
+  }
+  
+  .comments-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--space-xl);
+  }
+  
+  .title-icon {
+    font-size: 1.25rem;
+  }
+  
+  .giscus-wrapper {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    min-height: 200px;
+  }
+  
+  /* Override Giscus styles to match our theme */
+  .giscus-wrapper :global(.giscus) {
+    max-width: 100%;
+  }
+  
+  .giscus-wrapper :global(.giscus-frame) {
+    border: none !important;
+  }
+</style>

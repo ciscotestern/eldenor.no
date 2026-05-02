@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SkillCard from '../components/SkillCard.astro';
+
+const skills = [
+  {
+    title: 'Networking',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>',
+    skills: ['Cisco', 'Fortinet', 'SD-WAN', 'Routing', 'Switching', 'BGP/OSPF', 'Aruba'],
+  },
+  {
+    title: 'Security',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    skills: ['Firewalls', 'IDS/IPS', 'Zero Trust', 'VPN'],
+  },
+  {
+    title: 'Automation',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/><circle cx="12" cy="12" r="4"/><path d="M17.66 6.34l-2.83 2.83M9.17 14.83l-2.83 2.83M6.34 6.34l2.83 2.83M14.83 14.83l2.83 2.83"/></svg>',
+    skills: ['Python', 'Ansible', 'VMware VRO/VRA', 'Terraform (learning)', 'CI/CD (learning)'],
+  },
+  {
+    title: 'Cloud',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>',
+    skills: ['AWS', 'Azure', 'Docker'],
+  },
+];
+---
+
+<BaseLayout title="About" description="Learn more about Eldenor - Senior Network Engineer with 5+ years experience in enterprise networking and automation.">
+  <section class="about-page">
+    <div class="container">
+      <div class="content-width">
+        <!-- Header -->
+        <header class="about-header animate-fade-in">
+          <h1>About Me</h1>
+        </header>
+        
+        <!-- Bio -->
+        <div class="bio-section animate-fade-in animate-delay-1">
+          <p class="bio-text">
+            Hi there! I am a Senior Network Engineer with over 5 years of experience in designing and implementing network solutions that actually work, plus 12 years in IT, which has taught me a lot about keeping systems running smoothly. I have taken on many different roles over the years, which means I have seen a lot of "stuff", from the mildly confusing to the completely chaotic, and I have made it through all of it.
+          </p>
+          
+          <p class="bio-text">
+            When I am not building reliable and scalable networks or automating boring tasks, I am managing life with my twins, who make even the most complex network issues feel easy in comparison. I am also a big fan of poker, because what is life without a little strategy and risk, and tennis, where I try to serve as well as I do in my work.
+          </p>
+          
+          <p class="bio-text">
+            I also have a homelab where I experiment with new technology, because some hobbies are just too technical to not enjoy. If I am not solving problems or testing new tools, you can probably find me writing about my homelab tech experiments on my <a href="/blog">blog</a>.
+          </p>
+        </div>
+        
+        <!-- Skills -->
+        <div class="skills-section animate-fade-in animate-delay-2">
+          <h2>Skills & Expertise</h2>
+          
+          <div class="skills-grid">
+            {skills.map((skill) => (
+              <SkillCard
+                title={skill.title}
+                icon={skill.icon}
+                skills={skill.skills}
+              />
+            ))}
+          </div>
+        </div>
+        
+        <!-- Fun Facts -->
+        <div class="facts-section animate-fade-in animate-delay-3">
+          <h2>Quick Facts</h2>
+          
+          <div class="facts-grid">
+            <div class="fact-card">
+              <span class="fact-icon">🏠</span>
+              <div class="fact-content">
+                <span class="fact-label">Homelab</span>
+                <span class="fact-value">Always Experimenting</span>
+              </div>
+            </div>
+            
+            <div class="fact-card">
+              <span class="fact-icon">🃏</span>
+              <div class="fact-content">
+                <span class="fact-label">Hobby</span>
+                <span class="fact-value">Poker Strategy</span>
+              </div>
+            </div>
+            
+            <div class="fact-card">
+              <span class="fact-icon">🎾</span>
+              <div class="fact-content">
+                <span class="fact-label">Sport</span>
+                <span class="fact-value">Tennis</span>
+              </div>
+            </div>
+            
+            <div class="fact-card">
+              <span class="fact-icon">👶👶</span>
+              <div class="fact-content">
+                <span class="fact-label">Life Challenge</span>
+                <span class="fact-value">Twin Dad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-page {
+    padding: var(--space-4xl) 0;
+  }
+  
+  .about-header {
+    margin-bottom: var(--space-3xl);
+  }
+  
+  .about-header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  }
+  
+  .bio-section {
+    margin-bottom: var(--space-4xl);
+  }
+  
+  .bio-text {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+  
+  .bio-text:last-child {
+    margin-bottom: 0;
+  }
+  
+  .bio-text a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  
+  /* Skills Section */
+  .skills-section {
+    margin-bottom: var(--space-4xl);
+  }
+  
+  .skills-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-xl);
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-lg);
+  }
+  
+  /* Facts Section */
+  .facts-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-xl);
+  }
+  
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--space-md);
+  }
+  
+  .fact-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    transition: all var(--transition-base);
+  }
+  
+  .fact-card:hover {
+    border-color: var(--color-accent);
+  }
+  
+  .fact-icon {
+    font-size: 1.5rem;
+  }
+  
+  .fact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .fact-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .fact-value {
+    font-weight: 500;
+    color: var(--color-text);
+  }
+</style>

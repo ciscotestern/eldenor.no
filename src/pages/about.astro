@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const experience = [
+  { years: '12+', label: 'Years in IT' },
+  { years: '5+', label: 'Years in Networking' },
+  { years: '2', label: 'Tiny Humans (Twins)' },
+  { years: '∞', label: 'Cups of Coffee' },
+];
+---
+
+<BaseLayout title="About" description="A bit about Ruben Elden - the person behind the keyboard.">
+  <section class="about-page">
+    <div class="container">
+      <div class="content-width">
+        <!-- Header -->
+        <header class="about-header animate-fade-in">
+          <h1>About Me</h1>
+          <p class="subtitle">The short version: I work with networks, I have a developed a homelab addiction, and I am a dad of twins.</p>
+        </header>
+        
+        <!-- Stats -->
+        <div class="stats-row animate-fade-in animate-delay-1">
+          {experience.map((item) => (
+            <div class="stat-item">
+              <span class="stat-number">{item.years}</span>
+              <span class="stat-label">{item.label}</span>
+            </div>
+          ))}
+        </div>
+        
+        <!-- Bio -->
+        <div class="bio-section animate-fade-in animate-delay-2">
+          <h2>The Longer Version</h2>
+          
+          <p>
+            Hey, I'm Ruben. I have been doing IT stuff for over a decade now, with the last five years focused on networking. That means I spend my days working with routers, switches, firewalls, and occasionally yelling at DNS x).
+          </p>
+          
+          <p>
+            I genuinely enjoy what I do. There is something satisfying about building networks that just work, and even more satisfying when you can automate away the boring parts. Python and Ansible have become good friends of mine.
+          </p>
+          
+          <p>
+            Outside of work, I run a homelab where I experiment with things I probably should not touch in production. It is a great way to learn and an even better way to break things at 1 AM on a Saturday.
+          </p>
+          
+          <p>
+            When i am not staring in to a terminal, I am probably playing poker (I like the strategy side of it), attempting to play tennis, or being completely exhausted by my twins. They are amazing, but man, two at once is no joke.
+          </p>
+          
+          <p>
+            This site is just a little corner of the internet where I try to write about tech stuff that interests me. just notes from someone who likes tinkering with things.
+          </p>
+        </div>
+        
+        <!-- What I Work With -->
+        <div class="tools-section animate-fade-in animate-delay-3">
+          <h2>What I Work With</h2>
+          
+          <div class="tools-grid">
+            <div class="tool-category">
+              <h3>Networking</h3>
+              <p>Cisco, Fortinet, Aruba, SD-WAN, BGP, OSPF — the usual suspects.</p>
+            </div>
+            
+            <div class="tool-category">
+              <h3>Automation</h3>
+              <p>Python, Ansible, and slowly getting into Terraform and CI/CD pipelines.</p>
+            </div>
+            
+            <div class="tool-category">
+              <h3>Security</h3>
+              <p>Firewalls, VPNs, Zero Trust concepts. Keeping the bad stuff out.</p>
+            </div>
+            
+            <div class="tool-category">
+              <h3>Cloud & Virtualization</h3>
+              <p>AWS, Azure, Docker, Proxmox. A bit of everything.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact -->
+        <div class="contact-section animate-fade-in animate-delay-4">
+          <h2>Get in Touch</h2>
+          <p>
+            Feel free to leave a comment on any blog post, or find me wherever Elden or Eldenor pops up online. I'm not great at checking DMs, but I do read comments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-page {
+    padding: var(--space-4xl) 0;
+  }
+  
+  .about-header {
+    margin-bottom: var(--space-3xl);
+  }
+  
+  .about-header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: var(--space-md);
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+  
+  /* Stats Row */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-4xl);
+    padding: var(--space-xl);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .stat-number {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    line-height: 1.2;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+  
+  /* Bio Section */
+  .bio-section {
+    margin-bottom: var(--space-4xl);
+  }
+  
+  .bio-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xl);
+    color: var(--color-text);
+  }
+  
+  .bio-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+  
+  .bio-section p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Tools Section */
+  .tools-section {
+    margin-bottom: var(--space-4xl);
+  }
+  
+  .tools-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xl);
+  }
+  
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  .tool-category {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: all var(--transition-base);
+  }
+  
+  .tool-category:hover {
+    border-color: var(--color-accent);
+  }
+  
+  .tool-category h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    color: var(--color-accent);
+  }
+  
+  .tool-category p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Contact Section */
+  .contact-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+  }
+  
+  .contact-section p {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .stats-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tools-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .stats-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
