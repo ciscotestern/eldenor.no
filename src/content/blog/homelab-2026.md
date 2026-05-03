@@ -1,12 +1,12 @@
 ---
-title: "My HomeLab Setup 2025"
+title: "My HomeLab Setup 2026"
 description: "A look at my current homelab - from a trusty HP ProLiant to a beefy Dell Precision, and everything in between."
-pubDate: 2025-05-03
+pubDate: 2026-05-03
 category: "HomeLab"
 tags: ["homelab", "networking", "vmware", "docker"]
 ---
 
-I've been running a homelab for about six years now, and it is slowly evolved from "one server under the desk" to... well, slightly more servers under the desk. No fancy rack yet, just chaos beneath my gaming setup. But hey, it works.
+I have been been running a homelab for about six years now, and it is slowly evolved from "one server under the desk" to... well, slightly more beefy server under the desk. No fancy rack yet, just chaos beneath my gaming setup. But hey, it hopefully delivers what i want to accomplish.
 
 Here is what I am running these days.
 
