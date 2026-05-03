@@ -6,13 +6,6 @@ My personal website and blog. Built with Astro, hosted on Netlify, comments powe
 
 Just a simple site where I write about homelab stuff, networking, and whatever else I find interesting. No WordPress, no database, no nonsense.
 
-## Tech Stack
-
-- **Framework:** Astro (static site generator)
-- **Hosting:** Netlify (free tier)
-- **Comments:** Giscus (GitHub Discussions)
-- **SSL:** Free via Netlify
-
 ## How it works
 
 1. Write a blog post in Markdown
