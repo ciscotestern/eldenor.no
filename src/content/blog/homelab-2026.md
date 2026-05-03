@@ -45,21 +45,21 @@ Those UniFi 8-port PoE switches are sadly discontinued, which is a shame because
 
 ## Network Setup
 
-I am currently running 24 VLANs on ESXi. No fancy micro-segmentation yet — just good old VLANs keeping things separated. Though I have been eyeing Illumio to play with zero-trust segmentation at home. We will see if I get around to it.
+I am currently running 24 VLANs on ESXi. No fancy micro-segmentation yet, just good old VLANs keeping things separated. Though I have been eyeing Illumio to play with zero-trust segmentation at home. I am sure i will get a post on it rather soon :)
 
 ## What is Running Right Now
 
-On a Ubuntu (Debian-based) VM, I have got a few Docker containers doing the heavy lifting:
+On a Ubuntu VM, I have got a few Docker containers doing the heavy lifting:
 
 - **Technitium DNS** — handling all internal DNS
 - **UniFi Controller** — managing the APs and switches
 - **Nginx** — simple reverse proxy for internal services
 - **Custom notification containers** — pushing alerts to ntfy (more on this in a future post)
 
-And on the ESXi side:
+And on rest of the ESXi:
 
-- **VMware Cloud Foundation 9.0** — nested lab for learning VCF
-- **EVE-NG** — network simulation for labbing Cisco, Fortinet, and whatever else I want to break
+- **VMware Cloud Foundation 9.0** — nested lab for learning VCF (holodeck)
+- **EVE-NG** — network simulation for labbing Cisco, Fortinet, Palo Alto and whatever else I want to break
 
 ## This Website
 
@@ -70,11 +70,11 @@ The setup is stupidly simple and I love it:
 - **Code:** Astro + Markdown, hosted on [GitHub](https://github.com/ciscotestern/eldenor.no)
 - **Hosting:** Netlify (free tier, and it is great!)
 - **Comments:** Giscus (uses GitHub Discussions)
-- **SSL:** Free, automatic via Netlify
+- **SSL:** Free, automatic via Netlify (Just like nginx)
 
 The workflow is beautiful. I write a blog post in Markdown, push it to GitHub, and Netlify automatically builds and deploys the site within 30 seconds. No FTP, no manual uploads, no nonsense. Just write and push. Who ever wants wordpress?
 
-If you are still running WordPress for a simple blog or portfolio, do yourself a favor and look into static site generators. Simplisity is the best.
+If you are still running WordPress for a simple blog or portfolio, do yourself a favor and look into static site generators. Simplisity is and security is the best right?
 
 ## What is Next?
 
