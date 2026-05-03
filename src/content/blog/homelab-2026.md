@@ -12,14 +12,14 @@ Here is what I am running these days.
 
 ## The New Beast: Dell Precision 7820
 
-I recently got my hands on a Dell Precision 7820 Tower, and it is a bit overkill for a homelab. But that is kind of the point, right?
+I recently got my hands on a Dell Precision 7820 Tower, and it is a bit overkill???? for a homelab. But that is kind of the point, right?
 
 - **CPU:** Dual Intel Xeon Gold 6234 @ 3.30GHz (16 cores total)
 - **RAM:** 384 GB DDR4
 - **GPU:** NVIDIA RTX 6000 24GB GDDR6
 - **Hypervisor:** ESXi
 
-Why this much power? I wanted to lab with the big stuff — VMware Cloud Foundation 9.0, nested Cisco Nexus 9000v switches, that kind of thing. My old server was just too old to even think about running any of that.
+Why this much power? I wanted to lab with the big stuff, VMware Cloud Foundation 9.x, nested Cisco Nexus 9000v switches, that kind of thing. My old server was just too old to even think about running any of that.
 
 ## The Old Workhorse: HP ProLiant ML310e Gen8 v2
 
