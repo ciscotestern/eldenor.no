@@ -61,17 +61,32 @@ And on the ESXi side:
 - **VMware Cloud Foundation 9.0** — nested lab for learning VCF
 - **EVE-NG** — network simulation for labbing Cisco, Fortinet, and whatever else I want to break
 
+## This Website
+
+Speaking of homelab projects — this website is one of them. I recently ditched WordPress and rebuilt the whole thing using Astro, a static site generator.
+
+The setup is stupidly simple and I love it:
+
+- **Code:** Astro + Markdown, hosted on [GitHub](https://github.com/ciscotestern/eldenor.no)
+- **Hosting:** Netlify (free tier, and it is great!)
+- **Comments:** Giscus (uses GitHub Discussions)
+- **SSL:** Free, automatic via Netlify
+
+The workflow is beautiful. I write a blog post in Markdown, push it to GitHub, and Netlify automatically builds and deploys the site within 30 seconds. No FTP, no manual uploads, no nonsense. Just write and push. Who ever wants wordpress?
+
+If you are still running WordPress for a simple blog or portfolio, do yourself a favor and look into static site generators. Simplisity is the best.
+
 ## What is Next?
 
-I have got plans. Too many plans, probably.
+I have got plans. Too many plans, probably?
 
 - More EVE-NG labs with proper topology diagrams
 - Playing with Illumio for micro-segmentation
 - Maybe actually building a proper rack setup (we will see)
 - Writing more posts about specific lab projects
 
-For now, everything lives under my gaming desk in a pile of cables and blinking lights. It is not pretty, but it is mine.
+For now, everything lives under my gaming desk in a pile of cables and blinking lights. Follow and more blogposts is right around the corner.
 
 ---
 
-*Got questions about my setup? Drop a comment below — I would love to hear what you are running in your homelab too.*
+*Got questions about my setup? Drop a comment below, I would love to hear what you are running in your homelab too.*
