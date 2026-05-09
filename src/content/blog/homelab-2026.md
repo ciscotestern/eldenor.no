@@ -68,13 +68,13 @@ Speaking of homelab projects — this website is one of them. I recently ditched
 The setup is stupidly simple and I love it:
 
 - **Code:** Astro + Markdown, hosted on [GitHub](https://github.com/ciscotestern/eldenor.no)
-- **Hosting:** Netlify (free tier, and it is great!)
+- **Hosting:** Cloudflare (free)
 - **Comments:** Giscus (uses GitHub Discussions)
-- **SSL:** Free, automatic via Netlify (Just like nginx)
+- **SSL:** Free, automatic via Cloudflare
 
-The workflow is beautiful. I write a blog post in Markdown, push it to GitHub, and Netlify automatically builds and deploys the site within 30 seconds. No FTP, no manual uploads, no nonsense. Just write and push. Who ever wants wordpress?
+The workflow is beautiful. I write a blog post in Markdown, push it to GitHub, and Cloudflare automatically builds and deploys the site within 30 seconds. No FTP, no manual uploads, no security issues to worrie about. Just write and push.
 
-If you are still running WordPress for a simple blog or portfolio, do yourself a favor and look into static site generators. Simplisity is and security is the best right?
+If you are still running WordPress for a simple blog or portfolio, do yourself a favor and look into static site generators. Simplisity is and security with no operation is just golden.
 
 ## What is Next?
 
@@ -83,7 +83,7 @@ I have got plans. Too many plans, probably?
 - More EVE-NG labs with proper topology diagrams
 - Playing with Illumio for micro-segmentation
 - Maybe actually building a proper rack setup (we will see)
-- Writing more posts about specific lab projects
+- Writing more posts about what is done in the past
 
 For now, everything lives under my gaming desk in a pile of cables and blinking lights. Follow and more blogposts is right around the corner.
 
