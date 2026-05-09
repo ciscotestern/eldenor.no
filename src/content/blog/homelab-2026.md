@@ -25,27 +25,39 @@ Why this much power? I wanted to lab with the big stuff, VMware Cloud Foundation
 
 For the past six years, this little guy has been my playground. 32GB of RAM does not sound like much anymore, but it taught me a lot.
 
-On this server I learned to set up:
+It started out as a simple homelab server, but over time it became a place where I could test, break, rebuild and understand things properly.
+
+On this server I learned:
 
 - Home Assistant for smart home stuff
 - Plex, Sonarr, Radarr, Prowlarr, Overseerr — the full arr-stack
-- Custom Discord bots for notifications (mostly just for fun and proof-of-concept)
+- Custom Discord bots for notifications and small proof-of-concept automations
+- Windows Server domain controllers and Active Directory labs
+- Internal DNS, DHCP and basic enterprise network services
+- Hybrid identity scenarios with Azure
+- SAML authentication testing and troubleshooting
+- Docker-based services and container networking
+- Small test environments for work-related scenarios
 
-All running in Docker containers. It was the perfect "break things and learn" environment.
+A lot of the value came from being able to create and test things I worked with professionally. If I needed to understand how something behaved, I could build a small version of it at home first. Windows domains, authentication flows, hybrid Azure setups, DNS issues, certificates, reverse proxies, containers. 
+
+It has helped me more than I expected in real customer work. Having a place where I can safely test ideas for customers, validate assumptions and troubleshoot without consequences has been one of the most useful parts of the whole setup.
+
+It has been the perfect "break things and learn" environment.
 
 ## Networking Gear
 
 Nothing too crazy here, but it gets the job done:
 
 - **Firewall:** Fortigate 40F — solid little box for home use
-- **Access Points:** 2x UniFi U6 Lite — great coverage, no complaints
+- **Access Points:** 2x UniFi U6 Lite — great coverage
 - **Switches:** 2x Ubiquiti UniFi Switch 8-Port PoE (60W, managed)
 
 Those UniFi 8-port PoE switches are sadly discontinued, which is a shame because I love them. I have looked at the newer UISP Switch line as a replacement, but honestly, I will keep using these until they die.
 
 ## Network Setup
 
-I am currently running 24 VLANs on ESXi. No fancy micro-segmentation yet, just good old VLANs keeping things separated. Though I have been eyeing Illumio to play with zero-trust segmentation at home. I am sure i will get a post on it rather soon :)
+I am currently running 24 VLANs on ESXi, 3 WLAN's. No fancy micro-segmentation yet, just good old VLANs keeping things separated. Though I have been eyeing Illumio to play with zero-trust segmentation at home. I am sure i will get a post on it rather soon :)
 
 ## What is Running Right Now
 
@@ -72,9 +84,9 @@ The setup is stupidly simple and I love it:
 - **Comments:** Giscus (uses GitHub Discussions)
 - **SSL:** Free, automatic via Cloudflare
 
-The workflow is beautiful. I write a blog post in Markdown, push it to GitHub, and Cloudflare automatically builds and deploys the site within 30 seconds. No FTP, no manual uploads, no security issues to worrie about. Just write and push.
+The workflow is beautiful. I write a blog post in Markdown, push it to GitHub via VS Code, and Cloudflare automatically builds and deploys the site within 30 seconds. No FTP, no manual uploads, no security issues to worrie about, no operational tasks. Just write and push.
 
-If you are still running WordPress for a simple blog or portfolio, do yourself a favor and look into static site generators. Simplisity is and security with no operation is just golden.
+If you are still running WordPress for a simple blog or portfolio, do yourself a favor and look into static site generators. Simplisity and security with no operation is just golden.
 
 ## What is Next?
 
@@ -85,7 +97,7 @@ I have got plans. Too many plans, probably?
 - Maybe actually building a proper rack setup (we will see)
 - Writing more posts about what is done in the past
 
-For now, everything lives under my gaming desk in a pile of cables and blinking lights. Follow and more blogposts is right around the corner.
+Check back later for more posts about EVE-NG labs, network automation, etc.
 
 ---
 
