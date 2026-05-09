@@ -1,6 +1,6 @@
 # eldenor.no
 
-My personal website and blog. Built with Astro, hosted on Netlify, comments powered by Giscus.
+My personal website and blog. Built with Astro, hosted on Cloudflare, comments powered by Giscus.
 
 ## What is this?
 
@@ -10,7 +10,7 @@ Just a simple site where I write about homelab stuff, networking, and whatever e
 
 1. Write a blog post in Markdown
 2. Push to GitHub
-3. Netlify auto-builds and deploys
+3. Cloudflare auto-builds and deploys
 4. Done
 
 No FTP, no manual uploads. Just write and push.
