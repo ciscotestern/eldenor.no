@@ -1,5 +1,5 @@
 ---
-title: "My HomeLab Setup 2026"
+title: "VXLAN Toplogy on EVE-NG"
 description: "A look at my current homelab - from a trusty HP ProLiant to a beefy Dell Precision, and everything in between."
 pubDate: 2026-05-03
 category: "HomeLab"
