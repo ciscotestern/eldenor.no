@@ -249,6 +249,30 @@ const formattedUpdatedDate = updatedDate
     margin: var(--space-2xl) 0;
   }
   
+  .post-content :global(table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-xl) 0;
+  font-size: 0.95rem;
+}
+
+.post-content :global(th),
+.post-content :global(td) {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.post-content :global(th) {
+  font-weight: 600;
+  color: var(--color-text);
+  background: var(--color-bg-card);
+}
+
+.post-content :global(tr:hover) {
+  background: var(--color-bg-elevated);
+}
+
   .post-footer {
     margin-top: var(--space-3xl);
     padding-top: var(--space-xl);
