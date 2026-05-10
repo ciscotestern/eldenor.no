@@ -10,7 +10,6 @@ I have been doing a lot of data center network design work lately, and I figured
 
 This is part one of a x post series. In this post i will walk through the full topology, explain every design decision, and lay out the IP addressing plan. Then, over the following posts, we will configure every layer from scratch — and I will show you the exact commands, the verification steps, and all the holes i fall in to.
 
----
 
 ## Why Spine-Leaf?
 
@@ -28,7 +27,7 @@ Add VXLAN on top and you get a Layer 2 overlay that spans the entire fabric with
 
 This is what i am planning to build within these blog posts:
 
-![Network-topology](/images/network-topology.svg)
+![Network-topology](../../images/network-topology.png)
 
 Let me walk through each layer from top to bottom.
 
