@@ -28,7 +28,7 @@ Add VXLAN on top and you get a Layer 2 overlay that spans the entire fabric with
 
 This is what i am planning to build within these blog posts:
 
-![Network-topology](../../images/network-topology.svg)
+![Network-topology](/images/network-topology.svg)
 
 Let me walk through each layer from top to bottom.
 
