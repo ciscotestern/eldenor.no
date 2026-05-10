@@ -43,14 +43,16 @@ Let me walk through each layer of the onion.
 | LEAF-2 | nxosv9k-10.3.1 | 6 GB | VTEP, TENANT-A + B |
 | LEAF-3 | nxosv9k-10.3.1 | 6 GB | VTEP, TENANT-A + B |
 | LEAF-4 | nxosv9k-10.3.1 | 6 GB | VTEP, TENANT-B |
-| VIOS-1 | vios-adv...m8 | 512 MB | Simulated ISP-A |
-| VIOS-2 | vios-adv...m8 | 512 MB | Simulated ISP-B |
+| VIOS-1 | vios-adv...m8 | 1 GB | Simulated ISP-A |
+| VIOS-2 | vios-adv...m8 | 1 GB | Simulated ISP-B |
 | PAN-1 | PAN-VM | 4 GB | Firewall HA active |
 | PAN-2 | PAN-VM | 4 GB | Firewall HA passive |
-| ALPINE ×8 | alpine-3.18.4 | 128 MB | Tenant workloads |
-| **Total** | | **~58 GB** | |
+| ALPINE ×8 | alpine-3.18.4 | 4 GB | Tenant workloads |
+| **Total** | | **~90 GB** | |
 
-You need at least **64 GB** of RAM available in the EVE-NG host. If you are running tight, you can reduce each Nexus node to 4 GB.
+I am using **90 GB** of RAM for this deployment in the EVE-NG host. But If you are running tight, you can reduce each Nexus node to 4 GB, VIOS could also be reduced to atleast 512MB, and according to eve-ng doc linux tinycore instead of alpine for the workloads can run with 512MB ram for each of the hosts.
+
+I have kept PAN-VMs at 4 GB, because Palo Alto firewalls are running bad with less than this, if you reduce like i told above you will land at 45GB ram.
 
 ---
 
@@ -58,7 +60,7 @@ You need at least **64 GB** of RAM available in the EVE-NG host. If you are runn
 
 **VIOS-1** and **VIOS-2** simulate two separate ISPs. Each runs eBGP toward the Palo Alto HA pair and advertises a default route into the fabric. This lets us explore BGP path selection, AS-path prepending for active/standby WAN, and what happens when one ISP goes down.
 
-Using Cisco VIOS (`vios-adventerprisek0-m.spa.159-3.m8`) it is lightweight and more than capable for simulating an upstream provider.
+I am using Cisco VIOS (`vios-adventerprisek0-m.spa.159-3.m8`) it is lightweight and more than capable for simulating an upstream provider.
 
 ### Perimeter — Palo Alto HA Pair
 
