@@ -21,7 +21,6 @@ Spine-leaf fixes this with a simple rule: **every leaf connects to every spine, 
 
 Add VXLAN on top and you get a Layer 2 overlay that spans the entire fabric without the limitations of physical VLANs. Add BGP EVPN as the control plane and you get scalable, distributed MAC and IP learning with built-in multi-tenancy. This is the architecture running inside AWS, Google, Facebook, and most modern enterprise data centers.
 
----
 
 ## The Lab Topology
 
@@ -29,9 +28,8 @@ This is what i am planning to build within these blog posts:
 
 ![Network-topology](../../images/network-topology.png)
 
-Let me walk through each layer from top to bottom.
+Let me walk through each layer of the onion.
 
----
 
 ## Node Inventory
 
@@ -68,7 +66,7 @@ Using Cisco VIOS (`vios-adventerprisek0-m.spa.159-3.m8`) it is lightweight and m
 
 Both firewalls connect dual-homed into BorderLeaf-1 and BorderLeaf-2, which means firewall traffic is distributed across both border leafs in steady state, and survives either a single firewall or single border leaf failure.
 
-<!-- IMAGE: Palo Alto HA detail — HA1/HA2 links, active/passive state, dual connections to BLEAF-1 and BLEAF-2 -->
+<!-- IMAGE: Palo Alto HA detail — HA1/HA2 links, active/passive state, dual connections to BorderLeaf-1 and BorderLeaf-2 -->
 
 ### Border Leaf — BorderLeaf-1 and BorderLeaf-2
 
